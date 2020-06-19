@@ -1,58 +1,65 @@
 const MenuList = [
   {
     title: '首页',
-    key: '/home'
+    key: '/1'
   },
   {
     title: '数据管理',
-    key: '/home',
+    key: '/2',
     children: [
       {
         title: '数据查询',
-        key: '/home'
-      }, {
+        key: '/3'
+      },
+      {
         title: '脱敏字段配置',
-        key: '/home'
-      }, {
+        key: '/4'
+      },
+      {
         title: 'SQL操作记录',
-        key: '/home'
+        key: '/5'
       },
     ]
   },
   {
     title: '审批管理',
-    key: '/home',
+    key: '/6',
     children: [
       {
         title: '发起审批',
-        key: '/home'
-      }, {
+        key: '/7'
+      },
+      {
         title: '审批列表',
-        key: '/home'
-      }, {
+        key: '/8'
+      },
+      {
         title: 'SQL操作记录',
-        key: '/home'
+        key: '/9'
       },
     ]
   },
   {
     title: '用户管理',
-    key: '/home',
+    key: '/10',
     children: [
       {
         title: '发起审批',
-        key: '/home'
-      }, {
+        key: '/11'
+      },
+      {
         title: '审批列表',
-        key: '/home'
-      }, {
+        key: '/12'
+      },
+      {
         title: 'SQL操作记录',
-        key: '/home'
+        key: '/13'
       },
     ]
   },
   {
-    title: '系统管理'
+    title: '系统管理',
+    key: '/14'
   }
 ]
 
