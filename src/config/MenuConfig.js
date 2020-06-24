@@ -1,7 +1,7 @@
 const MenuList = [
   {
     title: '首页',
-    key: '/1'
+    key: '/home'
   },
   {
     title: '数据管理',

@@ -1,17 +1,20 @@
 import React from 'react'
 import { Layout } from 'antd';
 import NavLeft from '../components/NavLeft'
-const { Header, Footer, Sider, Content } = Layout;
-const LayOut = () => {
+import LHeader from '../components/Header'
+import LFooter from '../components/Footer'
+const { Sider, Content } = Layout;
+
+const LayOut = (props) => {
   return (
     <Layout>
       <Sider>
         <NavLeft />
       </Sider>
       <Layout>
-        <Header>Header</Header>
-        <Content>Content</Content>
-        <Footer>Footer</Footer>
+        <LHeader />
+        <Content>{props.children}</Content>
+        <LFooter />
       </Layout>
     </Layout>
   )
