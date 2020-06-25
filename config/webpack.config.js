@@ -40,6 +40,8 @@ const isExtendingEslintConfig = process.env.EXTEND_ESLINT === 'true';
 const imageInlineSizeLimit = parseInt(
   process.env.IMAGE_INLINE_SIZE_LIMIT || '10000'
 );
+const lessRegex = /\.(less)$/;
+const lessModuleRegex = /\.module\.(less)$/;  
 
 // Check if TypeScript is setup
 const useTypeScript = fs.existsSync(paths.appTsConfig);
@@ -450,6 +452,28 @@ module.exports = function(webpackEnv) {
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
               }),
+            },
+            {
+              test: lessRegex,
+              exclude: lessModuleRegex,
+              use: getStyleLoaders({ importLoaders: 3 }, 'less-loader'),          
+            },
+            {
+              test: lessModuleRegex,
+              use: getStyleLoaders(
+                 {
+                    importLoaders: 3,
+                    modules: true,
+                    getLocalIdent: getCSSModuleLocalIdent,
+                    modifyVars:{
+                      'primary-color': '#1DA57A',
+                      'link-color': '#1DA57A',  
+                      'border-radius-base': '2px',
+                    },
+                    javascriptEnabled: true,
+                },
+                   'less-loader'
+             ),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import './index.less';
 
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -7,10 +7,12 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 const Login = () => {
 	const onFinish = values => {
 		console.log('Received values of form: ', values);
+		window.location.href = '/home';
 	};
-
+	const Name = "Data Desensit";
 	return (
 		<div className="login">
+
 			<Form
 				name="normal_login"
 				className="login-form"
@@ -19,6 +21,7 @@ const Login = () => {
 				}}
 				onFinish={onFinish}
 			>
+				<h1 className="title">{Name}</h1>
 				<Form.Item
 					name="username"
 					rules={[

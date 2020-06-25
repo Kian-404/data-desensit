@@ -8,9 +8,9 @@ const { Sider, Content } = Layout;
 const LayOut = (props) => {
   return (
     <Layout>
-      <Sider>
+      {/* <Sider> */}
         <NavLeft />
-      </Sider>
+      {/* </Sider> */}
       <Layout>
         <LHeader />
         <Content>{props.children}</Content>

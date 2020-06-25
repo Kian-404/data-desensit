@@ -1,11 +1,13 @@
 const MenuList = [
   {
     title: '首页',
-    key: '/home'
+    key: '/home',
+    icon:'SettingOutlined'
   },
   {
     title: '数据管理',
     key: '/2',
+    icon:'SettingOutlined',
     children: [
       {
         title: '数据查询',
@@ -24,6 +26,7 @@ const MenuList = [
   {
     title: '审批管理',
     key: '/6',
+    icon:'SettingOutlined',
     children: [
       {
         title: '发起审批',
@@ -42,6 +45,8 @@ const MenuList = [
   {
     title: '用户管理',
     key: '/10',
+    icon:'SettingOutlined',
+
     children: [
       {
         title: '发起审批',
@@ -59,7 +64,9 @@ const MenuList = [
   },
   {
     title: '系统管理',
-    key: '/14'
+    key: '/14',
+    icon:'SettingOutlined',
+
   }
 ]
 
