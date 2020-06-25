@@ -15,6 +15,7 @@ const DRouter = () => {
 						<LayOut>
 							<Switch>
 								<Route path='/home' component={Home} />
+								<Route path='/3' component={Home} />
 								<Redirect to="/home" />
 							</Switch>
 						</LayOut>
