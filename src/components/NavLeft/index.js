@@ -15,23 +15,35 @@ const NavLeft = (props) => {
   // const [MenuNode, setMenuNode] = useState(renderMenu(MenuConfig));
 
   const renderMenu = (data) => {
-    let MenuList = data.map(item => (
-      <SubMenu
-        key={item.key}
-        title={item.title}>
-        {item.children &&
-          item.children.map(menuItem => (
-            <Menu.Item
-              key={menuItem.key}
-            >
-              <NavLink to={menuItem.key}>{menuItem.title}</NavLink>
-            </Menu.Item>
-          ))}
-      </SubMenu>
-    ));
+    let MenuList = data.map(item => {
+      if (item.children) {
+        return (
+          <SubMenu
+            key={item.key}
+            title={item.title}>
+            {item.children &&
+              item.children.map(menuItem => (
+                <Menu.Item
+                  key={menuItem.key}
+                >
+                  <NavLink to={menuItem.key}>{menuItem.title}</NavLink>
+                </Menu.Item>
+              ))}
+          </SubMenu>
+        )
+
+      } else {
+        return (
+          <Menu.Item key={item.key}>
+            <NavLink to={item.key}>{item.title}</NavLink>
+          </Menu.Item>
+        )
+      }
+
+    });
     return MenuList;
   }
-  let MenuNode =  renderMenu(MenuConfig);
+  let MenuNode = renderMenu(MenuConfig);
   // useEffect(() => {
   //   debugger;
   //   // setMenuNode(renderMenu(MenuConfig));
