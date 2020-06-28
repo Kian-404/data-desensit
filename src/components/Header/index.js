@@ -12,7 +12,7 @@ const LHeader = (props) => {
     console.log('123');
     ToogleMenu(!showMenu)
   }
-  let Icon = showMenu ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />;
+  let Icon = showMenu ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />;
   return (
     <Header className="header">
       <div className="toogle-icon" onClick={Toggle}>
