@@ -62,7 +62,7 @@ const NavLeft = (props) => {
   const homeHandleClick = () => {
     setCurrentKey('')
   };
-  let { showMenu } = props;
+  const { showMenu } = props;
   return (
     <Sider trigger={null} collapsible collapsed={showMenu}>
       <div className="nav-left">
