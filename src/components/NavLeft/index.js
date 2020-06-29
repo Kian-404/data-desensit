@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 import MenuConfig from '../../config/MenuConfig'
 import { connect } from 'react-redux'
 import './index.less'
-import { SettingOutlined, MenuUnfoldOutlined, HddOutlined } from '@ant-design/icons'
 import Logo from '../../logo.svg';
 
 const SubMenu = Menu.SubMenu;
@@ -20,7 +19,9 @@ const NavLeft = (props) => {
         return (
           <SubMenu
             key={item.key}
-            title={item.title}>
+            title={item.title}
+            icon={item.icon}
+          >
             {item.children &&
               item.children.map(menuItem => (
                 <Menu.Item
@@ -34,7 +35,7 @@ const NavLeft = (props) => {
 
       } else {
         return (
-          <Menu.Item key={item.key}>
+          <Menu.Item key={item.key} icon={item.icon}>
             <NavLink to={item.key}>{item.title}</NavLink>
           </Menu.Item>
         )
@@ -79,7 +80,6 @@ const NavLeft = (props) => {
           onClick={handleClick}
           theme="dark"
           mode="inline"
-          inlineCollapsed={showMenu}
         >
           {MenuNode}
         </Menu>
@@ -87,81 +87,6 @@ const NavLeft = (props) => {
     </Sider>
   )
 }
-// class NavLeft extends React.Component {
-//   state = {
-//     currentKey: ''
-//   }
-//   // 菜单点击
-//   handleClick = ({ item, key }) => {
-//     if (key === this.state.currentKey) {
-//       return false;
-//     }
-//     // 事件派发，自动调用reducer，通过reducer保存到store对象中
-//     // const { dispatch } = this.props;
-//     // dispatch(switchMenu(item.props.title));
-
-//     this.setState({
-//       currentKey: key
-//     });
-//     // hashHistory.push(key);
-//   };
-//   componentWillMount() {
-//     const menuTreeNode = this.renderMenu(MenuConfig);
-
-//     this.setState({
-//       menuTreeNode
-//     })
-//   }
-//   // 菜单渲染
-//   renderMenu = (data) => {
-
-//     return data.map((item) => {
-//       if (item.children) {
-//         return (
-//           <SubMenu title={item.title} key={item.key} icon={<SettingOutlined />}>
-//             {this.renderMenu(item.children)}
-//           </SubMenu>
-//         )
-//       }
-//       return <Menu.Item title={item.title} key={item.key}>
-//         <NavLink to={item.key}>{item.title}</NavLink>
-//       </Menu.Item>
-//     })
-//   }
-//   homeHandleClick = () => {
-//     // const { dispatch } = this.props;
-//     // dispatch(switchMenu('首页'));
-//     this.setState({
-//       currentKey: ""
-//     });
-//   };
-//   render() {
-//     let { showMenu } = this.props;
-//     console.log(showMenu);
-//     debugger;
-//     return (
-//       <Sider trigger={null} collapsible collapsed={showMenu}>
-//         <div className="nav-left">
-//           <div className="sider-menu-logo">
-//             <NavLink to="/home" onClick={this.homeHandleClick}>
-//               <div className="logo">
-//                 <h1 className="logo-text">Data Desensit</h1>
-//               </div>
-//             </NavLink>
-//           </div>
-//           <Menu
-//             onClick={this.handleClick}
-//             theme="dark"
-//             mode="inline"
-//             inlineCollapsed={showMenu}
-//           >
-//             {this.state.menuTreeNode}
-//           </Menu>
-//         </div>
-//       </Sider>
-//     );
-//   }
-// }
 const mapStateToProps = state => {
   return {
     showMenu: state.showMenu

@@ -1,13 +1,16 @@
+import React from 'react';
+import { HomeOutlined, SettingOutlined, CodeOutlined, ApartmentOutlined, UserOutlined } from '@ant-design/icons'
+
 const MenuList = [
   {
     title: '首页',
     key: '/home',
-    icon:'SettingOutlined'
+    icon: <HomeOutlined />
   },
   {
     title: '数据管理',
     key: '/2',
-    icon:'SettingOutlined',
+    icon: <CodeOutlined />,
     children: [
       {
         title: '数据查询',
@@ -26,7 +29,7 @@ const MenuList = [
   {
     title: '审批管理',
     key: '/6',
-    icon:'SettingOutlined',
+    icon:  <ApartmentOutlined />,
     children: [
       {
         title: '发起审批',
@@ -45,19 +48,19 @@ const MenuList = [
   {
     title: '用户管理',
     key: '/10',
-    icon:'SettingOutlined',
+    icon:  <UserOutlined />,
 
     children: [
       {
-        title: '发起审批',
+        title: '用户列表',
         key: '/11'
       },
       {
-        title: '审批列表',
+        title: '权限管理',
         key: '/12'
       },
       {
-        title: 'SQL操作记录',
+        title: '用户记录',
         key: '/13'
       },
     ]
@@ -65,7 +68,7 @@ const MenuList = [
   {
     title: '系统管理',
     key: '/14',
-    icon:'SettingOutlined',
+    icon: <SettingOutlined />,
 
   }
 ]
