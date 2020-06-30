@@ -11,7 +11,7 @@ const { Sider } = Layout;
 
 const NavLeft = (props) => {
   const [currentKey, setCurrentKey] = useState('');
-  // const [MenuNode, setMenuNode] = useState(renderMenu(MenuConfig));
+  // const [MenuNode, setMenuNode] = useState([]);
 
   const renderMenu = (data) => {
     let MenuList = data.map(item => {
@@ -44,7 +44,7 @@ const NavLeft = (props) => {
     });
     return MenuList;
   }
-  let MenuNode = renderMenu(MenuConfig);
+  const MenuNode = renderMenu(MenuConfig);
   // useEffect(() => {
   //   debugger;
   //   // setMenuNode(renderMenu(MenuConfig));
