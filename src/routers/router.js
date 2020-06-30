@@ -4,7 +4,7 @@ import App from '../App'
 import LayOut from '../layout/index'
 import Login from '../pages/Login/index';
 import Home from '../pages/Home'
-
+import ApproveList from '../pages/ApproveList'
 const DRouter = () => {
 	return (
 		<HashRouter>
@@ -14,8 +14,10 @@ const DRouter = () => {
 					<Route path="/" render={() =>
 						<LayOut>
 							<Switch>
+								<Route path="/" exact component={Home} />
 								<Route path='/home' component={Home} />
 								<Route path='/3' component={Home} />
+								<Route path='/approvelist' component={ApproveList} />
 								<Redirect to="/home" />
 							</Switch>
 						</LayOut>

@@ -37,7 +37,7 @@ const MenuList = [
       },
       {
         title: '审批列表',
-        key: '/8'
+        key: '/approvelist'
       },
       {
         title: 'SQL操作记录',
