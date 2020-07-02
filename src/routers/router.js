@@ -5,6 +5,7 @@ import LayOut from '../layout/index'
 import Login from '../pages/Login/index';
 import Home from '../pages/Home'
 import ApproveList from '../pages/ApproveList'
+import ApproveStatus from '../pages/ApproveStatus'
 const DRouter = () => {
 	return (
 		<HashRouter>
@@ -18,6 +19,7 @@ const DRouter = () => {
 								<Route path='/home' component={Home} />
 								<Route path='/3' component={Home} />
 								<Route path='/approvelist' component={ApproveList} />
+								<Route path='/approvestatus' component={ApproveStatus} />
 								<Redirect to="/home" />
 							</Switch>
 						</LayOut>

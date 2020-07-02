@@ -33,7 +33,7 @@ const MenuList = [
     children: [
       {
         title: '发起审批',
-        key: '/7'
+        key: '/approvestatus'
       },
       {
         title: '审批列表',
