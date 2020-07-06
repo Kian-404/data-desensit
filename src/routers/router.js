@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import App from '../App'
 import LayOut from '../layout/index'
 import Login from '../pages/Login/index';
@@ -8,7 +8,7 @@ import ApproveList from '../pages/ApproveList'
 import ApproveStatus from '../pages/ApproveStatus'
 const DRouter = () => {
 	return (
-		<HashRouter>
+		<Router>
 			<App>
 				<Switch>
 					<Route path="/login" component={Login} />
@@ -26,7 +26,7 @@ const DRouter = () => {
 					} />
 				</Switch>
 			</App>
-		</HashRouter>
+		</Router>
 	)
 }
 
