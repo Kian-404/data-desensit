@@ -13,7 +13,7 @@ const LayOut = (props) => {
       <Layout>
         <LHeader />
         <Content className="content">{props.children}</Content>
-        <LFooter />
+        <LFooter className="footer" />
       </Layout>
     </Layout>
   )
