@@ -14,15 +14,15 @@ const MenuList = [
     children: [
       {
         title: '数据查询',
-        key: '/3'
+        key: '/searchdata'
       },
       {
         title: '脱敏字段配置',
-        key: '/4'
+        key: '/dataconfig'
       },
       {
         title: 'SQL操作记录',
-        key: '/5'
+        key: '/optionhistory'
       },
     ]
   },
