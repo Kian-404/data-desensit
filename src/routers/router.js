@@ -4,6 +4,8 @@ import App from '../App'
 import LayOut from '../layout/index'
 import Login from '../pages/Login/index';
 import Home from '../pages/Home'
+import SearchData from '../pages/SearchData'
+import OptionHistory from '../pages/OptionHistory'
 import ApproveList from '../pages/ApproveList'
 import ApproveStatus from '../pages/ApproveStatus'
 const DRouter = () => {
@@ -18,9 +20,11 @@ const DRouter = () => {
 								<Route path="/" exact component={Home} />
 								<Route path='/home' component={Home} />
 								<Route path='/3' component={Home} />
+								<Route path='/searchdata' component={SearchData} />
+								<Route path='/optionhistory' component={OptionHistory} />
 								<Route path='/approvelist' component={ApproveList} />
 								<Route path='/approvestatus' component={ApproveStatus} />
-								<Redirect to="/home" />
+								{/* <Redirect to="/home" /> */}
 							</Switch>
 						</LayOut>
 					} />
