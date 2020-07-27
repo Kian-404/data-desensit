@@ -5,7 +5,9 @@ const { Footer } = Layout;
 
 const LFooter = () => {
   return (
-    <Footer className="footer">Footer</Footer>
+    <Footer className="footer">
+      <p>CopyRight © data-desensit</p>
+    </Footer>
   )
 }
 
